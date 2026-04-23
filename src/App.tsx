@@ -73,11 +73,11 @@ function App() {
   return (
     <main className="app-shell">
       <section className="hero">
-      <p className="eyebrow">Deliciousness a click away</p>
-          <h1>Restaurant Finder</h1>
-              <p className="hero-copy">
-              Find your favourite cuisines, in your neighbourhood.
-                  </p>
+ <p className="eyebrow">Deliciousness a click away</p>
+<h1>Restaurant Finder</h1>
+<p className="hero-copy">
+  Find your favourite cuisines, in your neighbourhood.
+</p>
 
         <form className="search-form" onSubmit={handleSubmit}>
           <label className="search-label" htmlFor="postcode">
@@ -109,11 +109,11 @@ function App() {
 
         {errorMessage ? <div className="message error">{errorMessage}</div> : null}
         {isLoading ? (
-              <div className="message loading-message">
-              <span className="loader" />
-                 Loading restaurants...
-                </div>
-                  ) : null}
+  <div className="message loading-message">
+    <span className="loader" />
+    Loading restaurants...
+  </div>
+) : null}
 
         {!isLoading && !errorMessage && restaurants.length === 0 ? (
           <div className="message">
