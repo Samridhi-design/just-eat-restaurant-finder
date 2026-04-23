@@ -73,12 +73,11 @@ function App() {
   return (
     <main className="app-shell">
       <section className="hero">
-        <p className="eyebrow">Restaurant Finder</p>
-        <h1>Search restaurants by UK postcode</h1>
-        <p className="hero-copy">
-          This app fetches restaurant data from the Just Eat API and shows only
-          the four requested fields: name, cuisines, rating, and address.
-        </p>
+      <p className="eyebrow">Deliciousness a click away</p>
+          <h1>Restaurant Finder</h1>
+              <p className="hero-copy">
+              Find your favourite cuisines, in your neighbourhood.
+                  </p>
 
         <form className="search-form" onSubmit={handleSubmit}>
           <label className="search-label" htmlFor="postcode">
@@ -109,7 +108,12 @@ function App() {
         </div>
 
         {errorMessage ? <div className="message error">{errorMessage}</div> : null}
-        {isLoading ? <div className="message">Loading restaurants...</div> : null}
+        {isLoading ? (
+              <div className="message loading-message">
+              <span className="loader" />
+                 Loading restaurants...
+                </div>
+                  ) : null}
 
         {!isLoading && !errorMessage && restaurants.length === 0 ? (
           <div className="message">
