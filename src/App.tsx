@@ -1,5 +1,6 @@
 import { FormEvent, useMemo, useState } from 'react'
 import './App.css'
+import { RestaurantList } from './components/RestaurantList'
 import type { Restaurant, RestaurantApiResponse } from './types/restaurant'
 import { mapRestaurant } from './utils/restaurantMapper'
 
@@ -114,7 +115,9 @@ function App() {
           <div className="message">
             No restaurants loaded yet. Search using a UK postcode to begin.
           </div>
-        ) : null}
+        ) : (
+          <RestaurantList restaurants={restaurants} />
+        )}
       </section>
     </main>
   )
